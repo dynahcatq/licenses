@@ -15,7 +15,7 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/pmezard/licenses/assets"
+	"github.com/dynahcatq/licenses/assets"
 )
 
 type Template struct {
@@ -560,7 +560,7 @@ displayed. It helps assessing the changes importance.
 	pkgs := flag.Args()
 
 	confidence := 0.9
-	licenses, err := listLicenses("", pkgs)
+	licenses, err := listTopLevelLicenses("", pkgs)
 	if err != nil {
 		return err
 	}
